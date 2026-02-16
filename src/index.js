@@ -1,0 +1,21 @@
+require("dotenv").config();
+const errorMiddleware = require("./middlewares/error.middleware");
+
+const express = require("express");
+const routes = require("./routes");
+const cors = require("cors");
+
+const app = express();
+
+app.use(cors());
+
+app.use(express.json());
+
+app.use(routes);
+
+app.use(errorMiddleware);
+
+
+app.listen(process.env.PORT, () => {
+  console.log("Server is running on http://localhost:3000");
+});
