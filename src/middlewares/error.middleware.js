@@ -1,3 +1,4 @@
+// middleware para padronizar os erros
 const { error } = require("../utils/response");
 
 function errorMiddleware(err, req, res, next) {

@@ -1,3 +1,5 @@
+// middleware para invalidar já na req caso esteja com token invalido
+
 const jwt = require("jsonwebtoken");
 
 module.exports = (req, res, next) => {

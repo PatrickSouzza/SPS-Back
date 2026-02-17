@@ -18,7 +18,7 @@ routes.post("/auth/login", authController.login);
 
 routes.use(authMiddleware);
 
-// Protected
+// Protected permitido apenas para admin por meio do middleware
 routes.get(
   "/users",
   roleMiddleware(["admin"]),

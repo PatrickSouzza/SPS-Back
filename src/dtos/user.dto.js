@@ -1,3 +1,4 @@
+// usado para não expor dados sensiveis
 function userResponseDTO(user) {
     return {
       id: user.id,

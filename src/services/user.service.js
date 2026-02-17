@@ -2,6 +2,7 @@ const userRepository = require("../repositories/user.repository");
 const { userResponseDTO } = require("../dtos/user.dto");
 const bcrypt = require("bcryptjs");
 
+// retorno com DTO para não expor a senha na res
 class UserService {
   findById(id){
     const user = userRepository.findById(id)

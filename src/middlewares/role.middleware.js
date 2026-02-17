@@ -1,3 +1,5 @@
+// middleware para filtrar por role
+
 function roleMiddleware(allowedRoles = []) {
     return (req, res, next) => {
       if (!req.user) {
